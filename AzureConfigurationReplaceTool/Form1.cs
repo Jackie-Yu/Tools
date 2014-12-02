@@ -75,15 +75,6 @@ namespace AzureConfigurationReplaceTool
                     return;
                 }
 
-                ConfigurationEntity entity = GetUIValues();
-                bool valid = ValidateAllData(entity);
-
-                if (!valid)
-                {
-                    MessageBox.Show("There exists invalid value, Please check all values are available.");
-                    return;
-                }
-
                 // find all *.cscfg files
                 //var files = System.IO.Directory.GetFiles(folder,);
                 List<string> files = new List<string>();
@@ -95,6 +86,15 @@ namespace AzureConfigurationReplaceTool
                 if (files.Count == 0)
                 {
                     MessageBox.Show("The folder doesn't include any *.cscfg files.");
+                    return;
+                }
+
+                ConfigurationEntity entity = GetUIValues();
+                bool valid = ValidateAllData(entity);
+
+                if (!valid)
+                {
+                    MessageBox.Show("Please make sure all configuration items(*) are completed.");
                     return;
                 }
 
@@ -694,7 +694,26 @@ namespace AzureConfigurationReplaceTool
 
         private void txtAccessTokenSigningKey_Leave(object sender, EventArgs e)
         {
-            SetDefaultValue(txtAccessTokenSigningKey, "{AccessTokenSigningKey}");
+            try
+            {
+                SetDefaultValue(txtAccessTokenSigningKey, "{AccessTokenSigningKey}");
+
+                if (!String.IsNullOrWhiteSpace(txtAccessTokenSigningKey.Text) && !"{AccessTokenSigningKey}".Equals(txtAccessTokenSigningKey.Text.Trim()))
+                {
+                    bool base64Encoded = IsBase64Encoded(txtAccessTokenSigningKey.Text.Trim());
+
+                    if (!base64Encoded)
+                    {
+                        MessageBox.Show("'" + txtAccessTokenSigningKey.Text + "' is not invalid base64 encoded string. Please enters original string in right textbox then click '<<-- Base64 to Convert' button.");
+                        txtAccessTokenSigningKey.Text = "{AccessTokenSigningKey}";
+                        txtBase64.Focus();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void txtResourceServerEncryptionKey_Leave(object sender, EventArgs e)
@@ -897,6 +916,50 @@ namespace AzureConfigurationReplaceTool
             SetDefaultValue(txtTwitterSecret, "{twitterConsumerSecret}");
         }
 
+        private void btnConvertToBase64String_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var content = txtBase64.Text.Trim();
+
+                if (string.IsNullOrWhiteSpace(content))
+                {
+                    MessageBox.Show("Please input original string.");
+                    return;
+                }
+
+                var base64String = Convert.ToBase64String(Encoding.UTF8.GetBytes(content));
+                this.txtAccessTokenSigningKey.Text = base64String;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private bool IsBase64Encoded(string content)
+        {
+            bool result = false;
+            try
+            {
+                string decode = Encoding.UTF8.GetString(Convert.FromBase64String(content));
+
+                result = !String.IsNullOrWhiteSpace(decode);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return result;
+            }
+        }
+
+        private void txtBase64_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (this.txtBase64.Text == "Enter original string here...(suggest : 10<string length<20)")
+            {
+                this.txtBase64.Clear();
+            }
+        }
 
     }
 }

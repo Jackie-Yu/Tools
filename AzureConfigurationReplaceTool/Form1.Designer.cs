@@ -172,18 +172,45 @@
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.label82 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.btnConvertToBase64String = new System.Windows.Forms.Button();
+            this.txtBase64 = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtThumbprint
             // 
             this.txtThumbprint.Location = new System.Drawing.Point(140, 18);
             this.txtThumbprint.Name = "txtThumbprint";
-            this.txtThumbprint.Size = new System.Drawing.Size(351, 20);
+            this.txtThumbprint.Size = new System.Drawing.Size(420, 20);
             this.txtThumbprint.TabIndex = 9;
             this.txtThumbprint.Text = "{thumbprint}";
             this.txtThumbprint.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtThumbprint_MouseClick);
@@ -201,7 +228,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(512, 20);
+            this.label2.Location = new System.Drawing.Point(29, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 13);
             this.label2.TabIndex = 12;
@@ -209,9 +236,9 @@
             // 
             // txtInternalAccessKey
             // 
-            this.txtInternalAccessKey.Location = new System.Drawing.Point(629, 17);
+            this.txtInternalAccessKey.Location = new System.Drawing.Point(138, 98);
             this.txtInternalAccessKey.Name = "txtInternalAccessKey";
-            this.txtInternalAccessKey.Size = new System.Drawing.Size(508, 20);
+            this.txtInternalAccessKey.Size = new System.Drawing.Size(422, 20);
             this.txtInternalAccessKey.TabIndex = 11;
             this.txtInternalAccessKey.Text = "{internal-accesskey}";
             this.txtInternalAccessKey.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtInternalAccessKey_MouseClick);
@@ -220,7 +247,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 74);
+            this.label4.Location = new System.Drawing.Point(4, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 13);
             this.label4.TabIndex = 16;
@@ -228,9 +255,9 @@
             // 
             // txtAccessTokenSigningKey
             // 
-            this.txtAccessTokenSigningKey.Location = new System.Drawing.Point(140, 72);
+            this.txtAccessTokenSigningKey.Location = new System.Drawing.Point(138, 126);
             this.txtAccessTokenSigningKey.Name = "txtAccessTokenSigningKey";
-            this.txtAccessTokenSigningKey.Size = new System.Drawing.Size(315, 20);
+            this.txtAccessTokenSigningKey.Size = new System.Drawing.Size(422, 20);
             this.txtAccessTokenSigningKey.TabIndex = 15;
             this.txtAccessTokenSigningKey.Text = "{AccessTokenSigningKey}";
             this.txtAccessTokenSigningKey.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAccessTokenSigningKey_MouseClick);
@@ -239,7 +266,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 32);
+            this.label6.Location = new System.Drawing.Point(14, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 13);
             this.label6.TabIndex = 20;
@@ -258,17 +285,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(469, 80);
+            this.label7.Location = new System.Drawing.Point(0, 157);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 13);
+            this.label7.Size = new System.Drawing.Size(138, 13);
             this.label7.TabIndex = 22;
-            this.label7.Text = "ResourceServerEncryptionKey:";
+            this.label7.Text = "ResourceServerEncrypKey:";
             // 
             // txtResourceServerEncryptionKey
             // 
-            this.txtResourceServerEncryptionKey.Location = new System.Drawing.Point(629, 77);
+            this.txtResourceServerEncryptionKey.Location = new System.Drawing.Point(138, 157);
             this.txtResourceServerEncryptionKey.Name = "txtResourceServerEncryptionKey";
-            this.txtResourceServerEncryptionKey.Size = new System.Drawing.Size(508, 20);
+            this.txtResourceServerEncryptionKey.Size = new System.Drawing.Size(422, 20);
             this.txtResourceServerEncryptionKey.TabIndex = 21;
             this.txtResourceServerEncryptionKey.Text = "{ResourceServerEncryptionKey}";
             this.txtResourceServerEncryptionKey.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtResourceServerEncryptionKey_MouseClick);
@@ -277,7 +304,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(27, 48);
+            this.label10.Location = new System.Drawing.Point(62, 49);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 13);
             this.label10.TabIndex = 29;
@@ -287,7 +314,7 @@
             // 
             this.txtRedisServer.Location = new System.Drawing.Point(140, 46);
             this.txtRedisServer.Name = "txtRedisServer";
-            this.txtRedisServer.Size = new System.Drawing.Size(351, 20);
+            this.txtRedisServer.Size = new System.Drawing.Size(420, 20);
             this.txtRedisServer.TabIndex = 28;
             this.txtRedisServer.Text = "{redis-server}";
             this.txtRedisServer.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtRedisServer_MouseClick);
@@ -296,7 +323,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(558, 51);
+            this.label11.Location = new System.Drawing.Point(75, 75);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 13);
             this.label11.TabIndex = 31;
@@ -304,9 +331,9 @@
             // 
             // txtRedisKey
             // 
-            this.txtRedisKey.Location = new System.Drawing.Point(629, 48);
+            this.txtRedisKey.Location = new System.Drawing.Point(140, 72);
             this.txtRedisKey.Name = "txtRedisKey";
-            this.txtRedisKey.Size = new System.Drawing.Size(508, 20);
+            this.txtRedisKey.Size = new System.Drawing.Size(420, 20);
             this.txtRedisKey.TabIndex = 30;
             this.txtRedisKey.Text = "{redis-key}";
             this.txtRedisKey.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtRedisKey_MouseClick);
@@ -334,7 +361,7 @@
             // 
             // txtBaseURL_Auth
             // 
-            this.txtBaseURL_Auth.Location = new System.Drawing.Point(710, 55);
+            this.txtBaseURL_Auth.Location = new System.Drawing.Point(132, 135);
             this.txtBaseURL_Auth.Name = "txtBaseURL_Auth";
             this.txtBaseURL_Auth.Size = new System.Drawing.Size(290, 20);
             this.txtBaseURL_Auth.TabIndex = 36;
@@ -345,7 +372,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(587, 58);
+            this.label5.Location = new System.Drawing.Point(9, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 13);
             this.label5.TabIndex = 37;
@@ -364,7 +391,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(15, 58);
+            this.label14.Location = new System.Drawing.Point(9, 58);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(118, 13);
             this.label14.TabIndex = 39;
@@ -383,7 +410,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(17, 80);
+            this.label15.Location = new System.Drawing.Point(11, 80);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(116, 13);
             this.label15.TabIndex = 41;
@@ -391,7 +418,7 @@
             // 
             // txtBaseURL_Admin
             // 
-            this.txtBaseURL_Admin.Location = new System.Drawing.Point(711, 26);
+            this.txtBaseURL_Admin.Location = new System.Drawing.Point(133, 106);
             this.txtBaseURL_Admin.Name = "txtBaseURL_Admin";
             this.txtBaseURL_Admin.Size = new System.Drawing.Size(290, 20);
             this.txtBaseURL_Admin.TabIndex = 42;
@@ -402,7 +429,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(580, 29);
+            this.label16.Location = new System.Drawing.Point(2, 109);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(125, 13);
             this.label16.TabIndex = 43;
@@ -942,6 +969,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label100);
+            this.groupBox1.Controls.Add(this.label99);
+            this.groupBox1.Controls.Add(this.label98);
+            this.groupBox1.Controls.Add(this.label97);
+            this.groupBox1.Controls.Add(this.label96);
             this.groupBox1.Controls.Add(this.label51);
             this.groupBox1.Controls.Add(this.label50);
             this.groupBox1.Controls.Add(this.label13);
@@ -957,9 +989,9 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtBaseURL_Developer);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(22, 139);
+            this.groupBox1.Location = new System.Drawing.Point(3, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1157, 106);
+            this.groupBox1.Size = new System.Drawing.Size(1157, 165);
             this.groupBox1.TabIndex = 100;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "System Base URL Configuration";
@@ -978,7 +1010,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.ForeColor = System.Drawing.Color.Red;
-            this.label50.Location = new System.Drawing.Point(1006, 58);
+            this.label50.Location = new System.Drawing.Point(426, 139);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(11, 13);
             this.label50.TabIndex = 47;
@@ -988,7 +1020,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(1007, 32);
+            this.label13.Location = new System.Drawing.Point(427, 113);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(11, 13);
             this.label13.TabIndex = 46;
@@ -1016,6 +1048,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label101);
             this.groupBox2.Controls.Add(this.label71);
             this.groupBox2.Controls.Add(this.label70);
             this.groupBox2.Controls.Add(this.label69);
@@ -1076,9 +1109,9 @@
             this.groupBox2.Controls.Add(this.txtDB_Admin_UserID);
             this.groupBox2.Controls.Add(this.txtDBName_User);
             this.groupBox2.Controls.Add(this.label28);
-            this.groupBox2.Location = new System.Drawing.Point(24, 251);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1155, 171);
+            this.groupBox2.Size = new System.Drawing.Size(1155, 199);
             this.groupBox2.TabIndex = 101;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database Connection String";
@@ -1391,9 +1424,9 @@
             this.groupBox3.Controls.Add(this.txtStorageAccountKey_Admin);
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Controls.Add(this.txtStorageAccountKey_Log);
-            this.groupBox3.Location = new System.Drawing.Point(22, 428);
+            this.groupBox3.Location = new System.Drawing.Point(6, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1155, 153);
+            this.groupBox3.Size = new System.Drawing.Size(1155, 180);
             this.groupBox3.TabIndex = 102;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Storage Account Configuration";
@@ -1526,7 +1559,7 @@
             this.groupBox4.Controls.Add(this.txtTwitterSecret);
             this.groupBox4.Controls.Add(this.txtTwitterKey);
             this.groupBox4.Controls.Add(this.label30);
-            this.groupBox4.Location = new System.Drawing.Point(22, 597);
+            this.groupBox4.Location = new System.Drawing.Point(3, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1155, 110);
             this.groupBox4.TabIndex = 103;
@@ -1535,6 +1568,14 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.txtBase64);
+            this.groupBox5.Controls.Add(this.btnConvertToBase64String);
+            this.groupBox5.Controls.Add(this.label94);
+            this.groupBox5.Controls.Add(this.label93);
+            this.groupBox5.Controls.Add(this.label92);
+            this.groupBox5.Controls.Add(this.label91);
+            this.groupBox5.Controls.Add(this.label90);
+            this.groupBox5.Controls.Add(this.label83);
             this.groupBox5.Controls.Add(this.label89);
             this.groupBox5.Controls.Add(this.label88);
             this.groupBox5.Controls.Add(this.label87);
@@ -1553,9 +1594,9 @@
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.txtRedisServer);
-            this.groupBox5.Location = new System.Drawing.Point(22, 12);
+            this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1155, 109);
+            this.groupBox5.Size = new System.Drawing.Size(1155, 191);
             this.groupBox5.TabIndex = 104;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Construct Security Configuration";
@@ -1564,7 +1605,7 @@
             // 
             this.label89.AutoSize = true;
             this.label89.ForeColor = System.Drawing.Color.Red;
-            this.label89.Location = new System.Drawing.Point(1138, 51);
+            this.label89.Location = new System.Drawing.Point(566, 76);
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(11, 13);
             this.label89.TabIndex = 52;
@@ -1574,7 +1615,7 @@
             // 
             this.label88.AutoSize = true;
             this.label88.ForeColor = System.Drawing.Color.Red;
-            this.label88.Location = new System.Drawing.Point(495, 48);
+            this.label88.Location = new System.Drawing.Point(566, 46);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(11, 13);
             this.label88.TabIndex = 51;
@@ -1584,7 +1625,7 @@
             // 
             this.label87.AutoSize = true;
             this.label87.ForeColor = System.Drawing.Color.Red;
-            this.label87.Location = new System.Drawing.Point(495, 20);
+            this.label87.Location = new System.Drawing.Point(566, 18);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(11, 13);
             this.label87.TabIndex = 50;
@@ -1594,7 +1635,7 @@
             // 
             this.label86.AutoSize = true;
             this.label86.ForeColor = System.Drawing.Color.Red;
-            this.label86.Location = new System.Drawing.Point(457, 75);
+            this.label86.Location = new System.Drawing.Point(566, 133);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(11, 13);
             this.label86.TabIndex = 49;
@@ -1604,7 +1645,7 @@
             // 
             this.label85.AutoSize = true;
             this.label85.ForeColor = System.Drawing.Color.Red;
-            this.label85.Location = new System.Drawing.Point(1138, 79);
+            this.label85.Location = new System.Drawing.Point(566, 160);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(11, 13);
             this.label85.TabIndex = 48;
@@ -1614,7 +1655,7 @@
             // 
             this.label84.AutoSize = true;
             this.label84.ForeColor = System.Drawing.Color.Red;
-            this.label84.Location = new System.Drawing.Point(1138, 20);
+            this.label84.Location = new System.Drawing.Point(566, 104);
             this.label84.Name = "label84";
             this.label84.Size = new System.Drawing.Size(11, 13);
             this.label84.TabIndex = 47;
@@ -1622,10 +1663,10 @@
             // 
             // btnReplace
             // 
-            this.btnReplace.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReplace.Location = new System.Drawing.Point(822, 723);
+            this.btnReplace.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReplace.Location = new System.Drawing.Point(580, 353);
             this.btnReplace.Name = "btnReplace";
-            this.btnReplace.Size = new System.Drawing.Size(218, 36);
+            this.btnReplace.Size = new System.Drawing.Size(272, 36);
             this.btnReplace.TabIndex = 105;
             this.btnReplace.Text = "Replace All *.cscfg configuration files";
             this.btnReplace.UseVisualStyleBackColor = true;
@@ -1634,22 +1675,24 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 723);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Firebrick;
+            this.label8.Location = new System.Drawing.Point(12, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(288, 13);
+            this.label8.Size = new System.Drawing.Size(359, 13);
             this.label8.TabIndex = 106;
-            this.label8.Text = "Select Folder(will search all *.cscfg files inlcudes sub folder):";
+            this.label8.Text = "Select Folder(will search all *.cscfg files inlcudes sub folders):";
             // 
             // txtFolder
             // 
-            this.txtFolder.Location = new System.Drawing.Point(25, 740);
+            this.txtFolder.Location = new System.Drawing.Point(15, 26);
             this.txtFolder.Name = "txtFolder";
             this.txtFolder.Size = new System.Drawing.Size(421, 20);
             this.txtFolder.TabIndex = 107;
             // 
             // btnBrowser
             // 
-            this.btnBrowser.Location = new System.Drawing.Point(452, 738);
+            this.btnBrowser.Location = new System.Drawing.Point(442, 24);
             this.btnBrowser.Name = "btnBrowser";
             this.btnBrowser.Size = new System.Drawing.Size(92, 23);
             this.btnBrowser.TabIndex = 108;
@@ -1659,37 +1702,246 @@
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(153, 767);
+            this.txtOutput.Location = new System.Drawing.Point(77, 407);
             this.txtOutput.Multiline = true;
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtOutput.Size = new System.Drawing.Size(1018, 116);
+            this.txtOutput.Size = new System.Drawing.Size(1109, 96);
             this.txtOutput.TabIndex = 109;
             // 
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(101, 809);
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Location = new System.Drawing.Point(22, 407);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(42, 13);
+            this.label82.Size = new System.Drawing.Size(49, 13);
             this.label82.TabIndex = 110;
             this.label82.Text = "Output:";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(651, 724);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(303, 354);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(156, 37);
+            this.btnSave.Size = new System.Drawing.Size(249, 36);
             this.btnSave.TabIndex = 111;
             this.btnSave.Text = "Save Screen Setting";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(15, 82);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1178, 241);
+            this.tabControl1.TabIndex = 112;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1170, 215);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Construct Security Configuration(*)";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1170, 215);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "SubSystem Base URL Configuration(*)";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1170, 215);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Database Connection String Configuration(*)";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.groupBox3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1170, 215);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Storage Account Configuration(*)";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.groupBox4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1170, 215);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Social Intergration Configuration(Optional)";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(576, 101);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(568, 13);
+            this.label83.TabIndex = 53;
+            this.label83.Text = "e.g: amk6gweljALUHMuBK+kC5lQktCwJINpSpLGIbsm96LFJ5GVOJErOH/TIRVQO+jh/SaNlMZ/noLpf" +
+    "4ZddmuWCQ==";
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(575, 73);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(548, 13);
+            this.label90.TabIndex = 54;
+            this.label90.Text = "Redis Cache key is provided by Azure Recis Cache,e.g: 3j7og8MdKOv260D3IMIBfdFmoRg" +
+    "qYqRW+Ybp+Vjo5C0=";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(575, 46);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(166, 13);
+            this.label91.TabIndex = 55;
+            this.label91.Text = "e.g:  xxx.redis.cache.windows.net";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(576, 18);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(288, 13);
+            this.label92.TabIndex = 56;
+            this.label92.Text = "e.g:  6A5CA2E6E517DCE598F6E9D04880EC7E54FD47F8";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(576, 129);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(125, 13);
+            this.label93.TabIndex = 57;
+            this.label93.Text = "Base64 Encoded String. ";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Location = new System.Drawing.Point(576, 157);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(307, 13);
+            this.label94.TabIndex = 58;
+            this.label94.Text = "e.g:  Lk2kd9!1zmP   (suggest string length: 10<string length<20)";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.ForeColor = System.Drawing.Color.Firebrick;
+            this.label95.Location = new System.Drawing.Point(15, 62);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(104, 15);
+            this.label95.TabIndex = 113;
+            this.label95.Text = "Configurations:";
+            // 
+            // btnConvertToBase64String
+            // 
+            this.btnConvertToBase64String.Location = new System.Drawing.Point(695, 124);
+            this.btnConvertToBase64String.Name = "btnConvertToBase64String";
+            this.btnConvertToBase64String.Size = new System.Drawing.Size(147, 23);
+            this.btnConvertToBase64String.TabIndex = 59;
+            this.btnConvertToBase64String.Text = "<<-- Base64 to Convert ";
+            this.btnConvertToBase64String.UseVisualStyleBackColor = true;
+            this.btnConvertToBase64String.Click += new System.EventHandler(this.btnConvertToBase64String_Click);
+            // 
+            // txtBase64
+            // 
+            this.txtBase64.Location = new System.Drawing.Point(848, 128);
+            this.txtBase64.Name = "txtBase64";
+            this.txtBase64.Size = new System.Drawing.Size(301, 20);
+            this.txtBase64.TabIndex = 60;
+            this.txtBase64.Text = "Enter original string here...(suggest : 10<string length<20)";
+            this.txtBase64.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBase64_MouseClick);
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(445, 31);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(174, 13);
+            this.label96.TabIndex = 49;
+            this.label96.Text = "e.g: https://apps-apis.cloudapp.net";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(445, 83);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(202, 13);
+            this.label97.TabIndex = 50;
+            this.label97.Text = "e.g: https://apps-developer.cloudapp.net";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(445, 109);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(183, 13);
+            this.label98.TabIndex = 51;
+            this.label98.Text = "e.g: https://apps-admin.cloudapp.net";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Location = new System.Drawing.Point(445, 135);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(176, 13);
+            this.label99.TabIndex = 52;
+            this.label99.Text = "e.g: https://apps-auth.cloudapp.net";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(445, 55);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(175, 13);
+            this.label100.TabIndex = 53;
+            this.label100.Text = "e.g: https://apps-user.cloudapp.net";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(112, 158);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(197, 13);
+            this.label101.TabIndex = 128;
+            this.label101.Text = "e.g: mhbdcyoqcx.database.windows.net";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1193, 895);
+            this.ClientSize = new System.Drawing.Size(1193, 515);
+            this.Controls.Add(this.label95);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label82);
             this.Controls.Add(this.txtOutput);
@@ -1697,11 +1949,6 @@
             this.Controls.Add(this.txtFolder);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnReplace);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Azure configuration file Replacement";
@@ -1716,6 +1963,12 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1867,6 +2120,27 @@
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.TextBox txtBase64;
+        private System.Windows.Forms.Button btnConvertToBase64String;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label101;
     }
 }
 
